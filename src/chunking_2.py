@@ -10,7 +10,7 @@ from dataclasses import dataclass
 @dataclass
 class ProcessingConfig:
     """Configuration settings for text processing"""
-    api_key: str = "2d5341da842ba4f133068a76fba1bc069199737b6178293b22765df2df33465f"
+    api_key: str = ""
     model_name: str = "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free"
     chunk_size: int = 1000
     overlap: int = 200
@@ -355,4 +355,5 @@ def main():
     print("✅ Processing complete!")
 
 if __name__ == "__main__":
+
     main()
