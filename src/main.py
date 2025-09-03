@@ -61,12 +61,12 @@ DB_URL = "postgresql://postgres.nobnxgtmpspfvhhxtlvw:IgqCrDmMvSEorSkO@aws-0-ap-s
 
 # LLM Configuration (Modified for Google Gemini 2.0 Flash)
 LLM_MODEL_NAME = "gemini-1.5-flash-latest" # Use Gemini 2.0 Flash
-GEMINI_API_KEY = "AIzaSyAfPrbEHkfZZ9jvueX9St5ixTKXzeQsyRQ" 
+GEMINI_API_KEY = "" 
 LLM_API_KEY = GEMINI_API_KEY 
 #Langfuse
-LANGFUSE_SECRET_KEY = "sk-lf-84146d11-89b9-44c6-9a8f-750b05b98938"
-LANGFUSE_PUBLIC_KEY = "pk-lf-7f878c1b-2292-4233-bf1f-21f505cd52c5"
-LANGFUSE_HOST = "https://insights-langfuse-nonprod.zoomrx.dev"
+LANGFUSE_SECRET_KEY = ""
+LANGFUSE_PUBLIC_KEY = ""
+LANGFUSE_HOST = ""
 LANGFUSE_ENABLED = "true"
 
 LANGFUSE_EVAL_SCOPE = os.getenv("LANGFUSE_EVAL_SCOPE", "analyze_research_endpoint,advanced_agent_search").split(',')
@@ -1372,4 +1372,5 @@ if __name__ == "__main__":
     import uvicorn
     # PORT environment variable is still useful for deployment flexibility
     port = int(os.getenv("PORT", 8000))
+
     uvicorn.run(app, host="0.0.0.0", port=port)
