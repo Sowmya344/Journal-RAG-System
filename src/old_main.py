@@ -59,7 +59,7 @@ DB_URL = "postgresql://postgres.nobnxgtmpspfvhhxtlvw:IgqCrDmMvSEorSkO@aws-0-ap-s
 LLM_API_BASE = "https://openrouter.ai/api/v1"
 LLM_MODEL_NAME = "deepseek/deepseek-r1-0528-qwen3-8b:free"
 # IMPORTANT: Replace this placeholder with your actual OpenRouter API key
-LLM_API_KEY = "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"
+LLM_API_KEY = "sk-or-v1-"
 
 # Initialize clients
 model: SentenceTransformer = SentenceTransformer("nomic-ai/nomic-embed-text-v1.5", trust_remote_code=True)
@@ -790,4 +790,5 @@ if __name__ == "__main__":
     import uvicorn
     # PORT environment variable is still useful for deployment flexibility
     port = int(os.getenv("PORT", 8000))
+
     uvicorn.run(app, host="0.0.0.0", port=port)
